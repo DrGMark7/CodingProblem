@@ -1,0 +1,35 @@
+Word = str(input('Enter 5 characters: '))
+Word_N = Word.lower()
+
+A = Word_N.replace('a','z')
+B = A.replace('b','y')
+C = B.replace('c','x')
+D = C.replace('d','w')
+E = D.replace('e','v')
+F = E.replace('f','u')
+G = F.replace('g','t')
+H = G.replace('h','s')
+I = H.replace('i','r')
+J = I.replace('j','q')
+K = J.replace('k','p')
+L = K.replace('l','o')
+M = L.replace('m','n')
+
+
+
+N = M.replace('n','m')
+O = N.replace('o','l')
+P = O.replace('p','k')
+Q = P.replace('q','j')
+R = Q.replace('r','i')
+S = R.replace('s','h')
+T = S.replace('t','g')
+U = T.replace('u','f')
+V = U.replace('v','e')
+W = V.replace('w','d')
+X = W.replace('x','c')
+Y = X.replace('y','b')
+Z = Y.replace('z','a')
+
+print('Encryption is',Z )
+

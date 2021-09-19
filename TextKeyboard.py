@@ -1,4 +1,4 @@
-def split(word):
+def split_str_char(word):
     return [char for char in word]
 
 def ConTranslate_EN_TH(Text):
@@ -6,8 +6,8 @@ def ConTranslate_EN_TH(Text):
     int_List = []
     New_List = []
 
-    Bucket_EN = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='
-                ,'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+'
+    Bucket_EN = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=' # Packet ข้่อมูลที่ทำขึ้นมาเพื่อไว้เทียบข้อมูล
+                ,'!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+' # Eng 
                 ,'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'
                 ,'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|'
                 ,'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'"
@@ -57,15 +57,32 @@ def ConTranslate_TH_EN(Text):
                 ,'(', ')', 'ฉ', 'ฮ', 'ฺ', '์', '?', 'ฒ', 'ฬ', 'ฦ',' ']
 
     for x in range(len(Text)):
-        List.append(Text[x])
-    for y in range(len(List)):
-        int_List.append(Bucket_TH.index(List[y]))
+        List.append(Text[x]) # แยกตัวอักษรออกจาก สตริง
+    for y in range(len(List)): # นับต่อจากลิสต์ x
+        int_List.append(Bucket_TH.index(List[y])) #  อันดับแรกอ่านค่า
     for z in range(len(int_List)):
         New_List.append(Bucket_EN[(int_List[z])])
 
     print(''.join(New_List))
 
-Text = str(input("Enter Text : "))
 
-ConTranslate_EN_TH(Text)
+
+print(" Translate Keyboard ")
+print(" ---End--- [0]")
+print(" TH --> EN [1]")
+print(" EN --> TH [2]")
+print("--------------------")
+
+while True:
+    C = int(input("Enter : "))
+    if C == 0:
+        print("--------End---------")
+        break
+    elif C == 1:
+        Text = str(input("Enter Text : "))
+        ConTranslate_TH_EN(Text)
+    elif C == 2:
+        Text = str(input("Enter Text : "))
+        ConTranslate_EN_TH(Text)
+
 

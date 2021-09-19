@@ -1,0 +1,16 @@
+from math import sqrt
+print('*'*30)
+print('*********About Circle*********')
+print('*'*30)
+r = float(input('Input radius: '))
+pi = 3.141592653589793
+area = (pi*(r*r))
+circ = (2*pi*r)
+print('Radius is',r)
+print('Circumference is', round(circ,4))
+print('Area is', round(area,2) )
+y = float(input('Enter y for finding x: '))
+x = '{:.4f}'.format(sqrt((r**2)-(y**2)))
+print('y is {0:.4f}'.format(y))
+print('x is '+ ('-'+x) + " and " + x )
+print('*'*30)
